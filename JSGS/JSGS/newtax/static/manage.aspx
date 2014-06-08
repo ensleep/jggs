@@ -219,8 +219,8 @@
                         <div style="float:left;width:225px;background-image:url('/Images/menubarnoword.png');background-repeat:no-repeat">
                             <div style="margin-left:15px;margin-top:9px;color:white;font-size:11px">欢迎你进入网上报税系统</div>
                             <div>
-                                <div style="color: #FFFFFF;float: left;font-size: 9px;height: 38px;margin-top: 6px;text-align: center;width: 30px;">申<br /><br />报</div>
-                                <div style="margin-top:18px;margin-left:10px;color:red;float:left">
+                                <div style="color: #FFFFFF;float: left;font-size: 9px;height: 38px;margin-top: 6px;text-align: center;width: 30px;"><div>申</div><div>报</div></div>
+                                <div style="margin-top:18px;margin-left:-10px;color:red;float:left">
                                     ·功·能·目·录
                                 </div>
                                 <div style="clear:both"></div>

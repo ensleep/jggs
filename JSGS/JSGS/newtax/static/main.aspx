@@ -233,20 +233,25 @@
                         <div style="height: 42px">&nbsp;</div>
                         <div style="padding-left: 17px">
                             <div class="title_bg">
-                                <div style="padding-top: 1px;">
-                                    用户名：<input type="text" maxlength="30" size="18" class="input" style="width: 120px;" name="j_username"/>
-                                </div>
-                                <div style="padding-top: 1px;">
-                                    密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" class="input" style="width: 120px;" maxlength="15" size="18" name="j_password" id="j_password"/>
-                                </div>
-                                <div style="padding-top: 1px;">
-                                    验证码：<input type="text" class="input" style="width: 120px;" size="12" name="j_captcha" id="j_captcha"/>
-                                </div>
-                                <div>
-                                    <span id="captchaImg">
+                                <table style="margin-left:30px">
+                                    <tr>
+                                        <th style="text-align:justify">用户名：</th>
+                                        <td><input type="text" maxlength="30" size="18" class="input" style="width: 120px;" name="j_username"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:justify">密码：</th>
+                                        <td><input type="password" class="input" style="width: 120px;" maxlength="15" size="18" name="j_password" id="j_password"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align:justify">验证码：</th>
+                                        <td><input type="text" class="input" style="width: 120px;" size="12" name="j_captcha" id="j_captcha"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><span id="captchaImg">
                                         <img src="/newtax/security/jcaptcha.jpg?12543" alt="" /></span>
-                                    <a href="javascript:refreshCaptcha()"><span class="center">换一张</span> </a>
-                                </div>
+                                    <a href="javascript:refreshCaptcha()"><span class="center">换一张</span> </a></td>
+                                    </tr>
+                                </table>
                                 <div>
 
 
@@ -351,21 +356,15 @@
                             <div id="Div4">&nbsp;</div>
                             <img src="/newtax/static/images/bstwybs_bjhb.gif" alt="" />
                             <div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">登记</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">发票</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">认定</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">申报征收</a>
+                            <a href="#" style="margin-left:20px">登记</a>
+                            <a href="#" style="margin-left:33px">发票</a>
+                            <a href="#" style="margin-left:30px">认定</a>
+                            <a href="#" style="margin-left:25px">申报征收</a>
                             </div>
                             <div style="background: url(/newtax/static/images/bstwybs_bj3_1.gif) no-repeat; width: 265px; height: 55px; line-height: 55px; vertical-align: middle;">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="/newtax/bsdh/bsdh_id=bsdh_home/showpage?keepThis=true&TB_iframe=true&height=400&width=700"
-                                title="网上办税服务厅办税流程导航" class="thickbox">办税导航</a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">下载中心</a>
+                                <a href="/newtax/bsdh/bsdh_id=bsdh_home/showpage?keepThis=true&TB_iframe=true&height=400&width=700"
+                                    title="网上办税服务厅办税流程导航" class="thickbox" style="margin-left:50px">办税导航</a>
+                                <a href="#" style="margin-left:96px">下载中心</a>
                             </div>
                         </div>
                     </div>

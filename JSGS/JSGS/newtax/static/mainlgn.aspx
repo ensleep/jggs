@@ -324,26 +324,21 @@
                     </div>
                     <div class="bstfw" style="width:280px">
                         <div style="height:12px"></div>
-                        <div style="margin-left:8px">
-                        <div id="Div4">&nbsp;</div>
-                        <img src="/newtax/static/images/bstwybs_bjhb.gif" alt="" />
-                        <div>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">登记</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">发票</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">认定</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">申报征收</a>
+                         <div style="margin-left: 8px">
+                            <div id="Div4">&nbsp;</div>
+                            <img src="/newtax/static/images/bstwybs_bjhb.gif" alt="" />
+                            <div>
+                            <a href="#" style="margin-left:20px">登记</a>
+                            <a href="#" style="margin-left:33px">发票</a>
+                            <a href="#" style="margin-left:30px">认定</a>
+                            <a href="#" style="margin-left:25px">申报征收</a>
+                            </div>
+                            <div style="background: url(/newtax/static/images/bstwybs_bj3_1.gif) no-repeat; width: 265px; height: 55px; line-height: 55px; vertical-align: middle;">
+                                <a href="/newtax/bsdh/bsdh_id=bsdh_home/showpage?keepThis=true&TB_iframe=true&height=400&width=700"
+                                    title="网上办税服务厅办税流程导航" class="thickbox" style="margin-left:50px">办税导航</a>
+                                <a href="#" style="margin-left:96px">下载中心</a>
+                            </div>
                         </div>
-                        <div style="background: url(/newtax/static/images/bstwybs_bj3_1.gif) no-repeat; width: 265px; height: 55px; line-height: 55px; vertical-align: middle;">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="/newtax/bsdh/bsdh_id=bsdh_home/showpage?keepThis=true&TB_iframe=true&height=400&width=700"
-                                title="网上办税服务厅办税流程导航" class="thickbox">办税导航</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="#">下载中心</a>
-                        </div></div>
                     </div>
                 </div>
             </form>

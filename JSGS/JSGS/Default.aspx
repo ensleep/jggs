@@ -73,7 +73,7 @@ body {
 	</tr>
 </tbody></table>
 <map name="Map">
-  <area shape="rect" coords="206,1,466,50" href="https://221.226.83.19:7001/newtax/static/main.jsp" alt="进入网上办税系统">
+  <area shape="rect" coords="206,1,466,50" href="newtax/static/main.aspx" alt="进入网上办税系统">
 </map>
 
 
