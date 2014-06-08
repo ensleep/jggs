@@ -171,7 +171,26 @@
     <Content Include="Images\close.png" />
     <Content Include="Images\curror.png" />
     <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\jcaptcha.jpg" />
+    <Content Include="Images\jcaptcha %281%29.jpg" />
+    <Content Include="Images\jcaptcha %2810%29.jpg" />
+    <Content Include="Images\jcaptcha %2811%29.jpg" />
+    <Content Include="Images\jcaptcha %2812%29.jpg" />
+    <Content Include="Images\jcaptcha %2813%29.jpg" />
+    <Content Include="Images\jcaptcha %2814%29.jpg" />
+    <Content Include="Images\jcaptcha %2815%29.jpg" />
+    <Content Include="Images\jcaptcha %2816%29.jpg" />
+    <Content Include="Images\jcaptcha %2817%29.jpg" />
+    <Content Include="Images\jcaptcha %2818%29.jpg" />
+    <Content Include="Images\jcaptcha %2819%29.jpg" />
+    <Content Include="Images\jcaptcha %282%29.jpg" />
+    <Content Include="Images\jcaptcha %2820%29.jpg" />
+    <Content Include="Images\jcaptcha %283%29.jpg" />
+    <Content Include="Images\jcaptcha %284%29.jpg" />
+    <Content Include="Images\jcaptcha %285%29.jpg" />
+    <Content Include="Images\jcaptcha %286%29.jpg" />
+    <Content Include="Images\jcaptcha %287%29.jpg" />
+    <Content Include="Images\jcaptcha %288%29.jpg" />
+    <Content Include="Images\jcaptcha %289%29.jpg" />
     <Content Include="Images\kuang.jpg" />
     <Content Include="Images\Managebg.png" />
     <Content Include="Images\menubar.png" />
@@ -321,6 +340,7 @@
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquerycookies.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>

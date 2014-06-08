@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="/newtax/static/styles/newtax_1/css/index.css" />
         <link rel="stylesheet" href="/newtax/static/styles/bsdh/thickbox.css" />
-    <script src="/newtax/static/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         $(function() {

@@ -17,16 +17,37 @@
 
     <link rel="stylesheet" href="/newtax/static/styles/newtax_1/css/index.css" />
     <link rel="stylesheet" href="/newtax/static/styles/bsdh/thickbox.css" />
-    <script src="/newtax/static/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="../../Scripts/jquerycookies.js"  type="text/javascript"></script>
+        <script src="/newtax/static/js/jquery/thickbox.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(":input").focus(function () {
+                    $(this).addClass("focus");
+                }).blur(function () {
+                    $(this).removeClass("focus");
 
-    <script type="text/javascript">
-        $(function() {
-            refreshCaptcha();
-        });
-
-        function refreshCaptcha() {
-            $('#captchaImg').html('<img src="/images/jcaptcha.jpg?' + Math.round(Math.random() * 100000) + '"/>');
-        }
+                });
+                ChangeImg();
+            });
+            function ChangeImg() {
+                var img = 0;
+                var validimg = 0;
+                if (Jcookie("validimg") == null) {
+                    Jcookie("validimg", "1");
+                    img = 1;
+                } else {
+                    validimg =parseInt(Jcookie("validimg"));
+                    if (validimg > 19) {
+                        img = 1;
+                        Jcookie("validimg", "1");
+                    } else {
+                        img = 1 + validimg;
+                    }
+                }
+                $("#validimg").attr("src", "../../images/jcaptcha (" + img + ").jpg");
+                Jcookie("validimg", img);
+            }
     </script>
     <style type="text/css">
         a.link1 {
@@ -57,40 +78,6 @@
     <div id="center">
 
 
-        <script src="/newtax/static/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
-        <script src="/newtax/static/js/jquery/thickbox.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $(":input").focus(function(){
-                    $(this).addClass("focus");
-                }).blur(function(){
-                    $(this).removeClass("focus");
-
-                });
-
-            });
-
-            //页面即将关闭事件
-            //function window.onbeforeunload(){
-            //    // window.event.returnValue = '关闭浏览器将退出系统.';
-            //    //用户点击浏览器右上角关闭按钮或是按alt+F4关闭
-            //    if(event.clientX > document.body.clientWidth && event.clientY<0 || event.altKey)
-            //    {
-            //        location.href="/newtax/static/j_spring_security_logout";
-            //    }
-
-            //        //用户点击任务栏，右键关闭。s或是按alt+F4关闭
-            //    else if(event.clientY > document.body.clientHeight || event.altKey)
-            //    {
-            //        location.href="/newtax/static/j_spring_security_logout";
-            //    }
-            //        //其他情况为刷新
-            //    else
-            //    {
-
-            //    }
-            //}
-        </script>
         <div id="logo" style="width: 100%; height: 69px;">
             <div style="float: right; font-weight: normal; padding: 10px;"><a href="/newtax/public/adduser" onclick="ShowNote()">注册用户</a>&nbsp;|&nbsp;<a href="http://wsbs.js-l-tax.gov.cn/" target="_new">地税网上办税</a>&nbsp;|&nbsp;</div>
         </div>
@@ -248,8 +235,8 @@
                                     </tr>
                                     <tr>
                                         <td colspan="2"><span id="captchaImg">
-                                        <img src="/newtax/security/jcaptcha.jpg?12543" alt="" /></span>
-                                    <a href="javascript:refreshCaptcha()"><span class="center">换一张</span> </a></td>
+                                        <img id="validimg" alt="" /></span>
+                                    <a href="#" onclick="ChangeImg();"><span class="center">换一张</span> </a></td>
                                     </tr>
                                 </table>
                                 <div>
