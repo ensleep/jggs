@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace JSGS.newtax.@static
 {
-    public partial class manage : System.Web.UI.Page
+    public partial class nssb_GetSssq : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

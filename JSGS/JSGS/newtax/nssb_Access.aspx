@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="main.aspx.cs" Inherits="JSGS.newtax.static.main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="nssb_Access.aspx.cs" Inherits="JSGS.newtax.nssb_Access" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -16,38 +16,17 @@
 
 
     <link rel="stylesheet" href="/newtax/static/styles/newtax_1/css/index.css" />
-    <link rel="stylesheet" href="/newtax/static/styles/bsdh/thickbox.css" />
+        <link rel="stylesheet" href="/newtax/static/styles/bsdh/thickbox.css" />
     <script src="../../Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
-        <script src="../../Scripts/jquerycookies.js"  type="text/javascript"></script>
-        <script src="/newtax/static/js/jquery/thickbox.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(":input").focus(function () {
-                    $(this).addClass("focus");
-                }).blur(function () {
-                    $(this).removeClass("focus");
 
-                });
-                ChangeImg();
-            });
-            function ChangeImg() {
-                var img = 0;
-                var validimg = 0;
-                if (Jcookie("validimg") == null) {
-                    Jcookie("validimg", "1");
-                    img = 1;
-                } else {
-                    validimg =parseInt(Jcookie("validimg"));
-                    if (validimg > 19) {
-                        img = 1;
-                        Jcookie("validimg", "1");
-                    } else {
-                        img = 1 + validimg;
-                    }
-                }
-                $("#validimg").attr("src", "../../images/jcaptcha (" + img + ").jpg");
-                Jcookie("validimg", img);
-            }
+    <script type="text/javascript">
+        $(function() {
+            refreshCaptcha();
+        });
+
+        function refreshCaptcha() {
+            $('#captchaImg').html('<img src="/images/jcaptcha.jpg?' + Math.round(Math.random() * 100000) + '"/>');
+        }
     </script>
     <style type="text/css">
         a.link1 {
@@ -69,6 +48,66 @@
                 background-position: right top;
                 color: #DC6B00;
             }
+            #DataTable{
+                -webkit-border-horizontal-spacing: 0px;
+-webkit-border-vertical-spacing: 0px;
+border-bottom-color: rgb(128, 128, 128);
+border-bottom-width: 1px;
+border-collapse: separate;
+border-left-color: rgb(128, 128, 128);
+border-left-width: 1px;
+border-right-color: rgb(128, 128, 128);
+border-right-width: 1px;
+border-top-color: rgb(128, 128, 128);
+border-top-width: 1px;
+color: rgb(0, 0, 0);
+display: table;
+font-family: 'Arial,宋体';
+font-size: 16px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+height: 176px;
+line-height: normal;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+text-align: start;
+white-space: normal;
+width: 728px;
+            }
+            #DataTable tr{
+                display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+            }
+            #DataTable td{
+                background-color: rgb(255, 255, 255);
+                    border-collapse: separate;
+                    color: rgb(0, 0, 0);
+                    font-family: 'Arial,宋体';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: normal;
+                    line-height: normal;
+                    margin-bottom: 0px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    margin-top: 0px;
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 0px;
+                    text-align: start;
+                    vertical-align: middle;
+                    white-space: normal;
+            }
     </style>
     <title>江苏省国家税务局网上办税系统</title>
 
@@ -78,6 +117,40 @@
     <div id="center">
 
 
+        <script src="/newtax/static/js/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+        <script src="/newtax/static/js/jquery/thickbox.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(":input").focus(function(){
+                    $(this).addClass("focus");
+                }).blur(function(){
+                    $(this).removeClass("focus");
+
+                });
+
+            });
+
+            //页面即将关闭事件
+            //function window.onbeforeunload(){
+            //    // window.event.returnValue = '关闭浏览器将退出系统.';
+            //    //用户点击浏览器右上角关闭按钮或是按alt+F4关闭
+            //    if(event.clientX > document.body.clientWidth && event.clientY<0 || event.altKey)
+            //    {
+            //        location.href="/newtax/static/j_spring_security_logout";
+            //    }
+
+            //        //用户点击任务栏，右键关闭。s或是按alt+F4关闭
+            //    else if(event.clientY > document.body.clientHeight || event.altKey)
+            //    {
+            //        location.href="/newtax/static/j_spring_security_logout";
+            //    }
+            //        //其他情况为刷新
+            //    else
+            //    {
+
+            //    }
+            //}
+        </script>
         <div id="logo" style="width: 100%; height: 69px;">
             <div style="float: right; font-weight: normal; padding: 10px;"><a href="/newtax/public/adduser" onclick="ShowNote()">注册用户</a>&nbsp;|&nbsp;<a href="http://wsbs.js-l-tax.gov.cn/" target="_new">地税网上办税</a>&nbsp;|&nbsp;</div>
         </div>
@@ -188,7 +261,7 @@
             <table class="line" cellpadding="0" cellspacing="0">
             </table>
             <div id="loading" align="center" style="position: absolute; display: none; top: 30%; left: 40%; z-index: 99">
-                <img src="/newtax/static/images/butterfly/loading.gif" width="50" height="50" alt="">
+                <img src="/newtax/static/images/butterfly/loading.gif" width="50" height="50" alt=""/>
                 <br/>
                 <font color="green"><strong>读取数据，请稍等...</strong></font>
             </div>
@@ -198,164 +271,71 @@
         </div>
         <div id="main">
 
-            <form name="f" runat="server">
-
-                <div>
-                    <div id="left">
-                        <div style="padding: 0px 0px 0px 0px; float: left; margin: 1px 0 0 0;">
-                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-                                codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
-                                width="632" height="200">
-                                <param name="movie" value="/newtax/static/images/fl2.swf" />
-                                <param name="quality" value="high" />
-                                <param name="wmode" value="transparent"/>
-                                <embed src="/newtax/static/images/fl2.swf" quality="high"
-                                    pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"
-                                    width="632" height="200"></embed>
-                            </object>
-                        </div>
-                    </div>
-
-                    <div id="right" style="text-align: left; background-image: url('/Images/UserInfo.png'); width: 277px; height: 202px">
-                        <div style="height: 42px">&nbsp;</div>
-                        <div style="padding-left: 17px">
-                            <div class="title_bg">
-                                <table style="margin-left:30px">
-                                    <tr>
-                                        <th style="text-align:justify">用户名：</th>
-                                        <td><input type="text" maxlength="30" size="18" class="input" style="width: 120px;" name="j_username"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th style="text-align:justify">密码：</th>
-                                        <td><input type="password" class="input" style="width: 120px;" maxlength="15" size="18" name="j_password" id="j_password"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th style="text-align:justify">验证码：</th>
-                                        <td><input type="text" class="input" style="width: 120px;" size="12" name="j_captcha" id="j_captcha"/></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"><span id="captchaImg">
-                                        <img id="validimg" alt="" /></span>
-                                    <a href="#" onclick="ChangeImg();"><span class="center">换一张</span> </a></td>
-                                    </tr>
-                                </table>
-                                <div>
-
-
-                                    <a href="/newtax/login/getpass">·忘记密码</a>
-                                </div>
-
-
-                                <div style="padding: 1px;">
-
-                                    <input type="button" value="CA证书登录" class="buttonca" onclick="location.href='https://221.226.83.19/newtax/getprotocol'"/>
-                                    &nbsp;<asp:Button runat="server" ID="btnLogn" Text="登录" CssClass="button" OnClick="btnLogn_Click" />
-                                    &nbsp;<input type="reset" value="重置" class="button" id="proceed1"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <form runat="server" id="form1">
+                <div style="background-color:white;width:913px;height:424px;">
+<%--                    <div style="text-align:center;color:red;height:14px">欢迎南京汉风堂能源物资有限公司!</div>--%>
+                       <table width="765" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center">
+    <tbody><tr>
+        <td width="273" height="19">当前位置：<a class="class" href="../../../">首页</a> &gt;&gt;网上办税平台</td>
+        <td width="373">
+            <div align="left">
+                
+                    <font color="red">欢迎南京海亿自动化技术有限公司！
+                    </font>
                 </div>
-                <div id="leftbott">
-                    <div class="bstxx">
-                        <div id="bstqt2">&nbsp;</div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle"/>&nbsp;&nbsp;<a href="#">涉税提醒</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle"/>&nbsp;&nbsp;<a href="#">税务登记信息
-                            </a>
-                            <br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">发票购领资格信息
-                            </a>
-                            <br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">税款缴纳信息
-                            </a>
-                            <br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">办税进度查询
-                            </a>
-                            <br/>
-                        </div>
-                    </div>
-                    <div class="bstznhd">
-                        <div id="Div1">&nbsp;</div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">我要评价</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">我要投诉</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">我要建议</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">网上调查</a><br/>
-                        </div>
-                    </div>
-                    <div class="bstzxfd">
-                        <div id="Div2">&nbsp;</div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">网上咨询
-                            </a>
-                            <br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">税法知识库</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">热点问题
-                            </a>
-                            <br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">税收政策智能问答</a><br/>
-                        </div>
-                    </div>
-                    <div class="bsthelp">
-                        <div id="Div3">&nbsp;</div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="/newtax/menu/menu_id=hsqjyzt">汇算清缴一站通</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">税务机构设置导航
-                            </a>
-                            <br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">网上操作导航</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="/newtax/menu/menu_id=wydy">我要打印</a><br/>
-                        </div>
-                        <div style="padding-top: 6px; padding-left: 10px;">
-                            <img src="/newtax/static/images/dot2_2.gif" align="absmiddle" />&nbsp;&nbsp;<a href="#">接收回执</a><br/>
-                        </div>
-                    </div>
-                    <div class="bstfw" style="width: 280px">
-                        <div style="height: 12px"></div>
-                        <div style="margin-left: 8px">
-                            <div id="Div4">&nbsp;</div>
-                            <img src="/newtax/static/images/bstwybs_bjhb.gif" alt="" />
+        </td>
+    </tr>
+</tbody></table>
+                    <div style="background-color:white">
+                        <div style="float:left;width:225px;background-image:url('/Images/menubarnoword.png');background-repeat:no-repeat">
+                            <div style="margin-left:15px;margin-top:9px;color:white;font-size:11px">欢迎你进入网上报税系统</div>
                             <div>
-                            <a href="#" style="margin-left:20px">登记</a>
-                            <a href="#" style="margin-left:33px">发票</a>
-                            <a href="#" style="margin-left:30px">认定</a>
-                            <a href="#" style="margin-left:25px">申报征收</a>
+                                <div style="color: #FFFFFF;float: left;font-size: 9px;height: 38px;margin-top: 6px;text-align: center;width: 30px;"><div>申</div><div>报</div></div>
+                                <div style="margin-top:18px;margin-left:-10px;color:red;float:left">
+                                    ·功·能·目·录
+                                </div>
+                                <div style="clear:both"></div>
+
                             </div>
-                            <div style="background: url(/newtax/static/images/bstwybs_bj3_1.gif) no-repeat; width: 265px; height: 55px; line-height: 55px; vertical-align: middle;">
-                                <a href="/newtax/bsdh/bsdh_id=bsdh_home/showpage?keepThis=true&TB_iframe=true&height=400&width=700"
-                                    title="网上办税服务厅办税流程导航" class="thickbox" style="margin-left:50px">办税导航</a>
-                                <a href="#" style="margin-left:96px">下载中心</a>
+                            <div style="margin-left:38px;font-size:14px">
+                                <div style="height:32px;color:gray;font-size: 12px;font-family:'Arial,宋体';">更换所属时期</div>
+                                <div style="height:32px;color:gray;font-size: 12px;font-family:'Arial,宋体';">网上申报说明</div>
+                                <div style="height:32px;color:gray;font-size: 12px;font-family:'Arial,宋体';">常见问题解答</div>
+                                <div style="height:32px;color:gray;font-size: 12px;font-family:'Arial,宋体';">封面汇总打印</div>
+                                <div style="height:32px;color:gray;font-size: 12px;font-family:'Arial,宋体';">退出网上申报</div>
                             </div>
                         </div>
+                        <div style="float:left;width:635px"><table width="90%" border="0" cellspacing="0" cellpadding="10">
+    <tbody><tr>
+        <td><img src="/newtax/static/assets/images/sanjiao.gif" width="14" height="7"> <font color="999999" class="p1">
+            你现在的位置：[企业]...申报报表...报表列表<br>
+            ...................................................................................
+        </font></td>
+    </tr>
+</tbody></table>
+                         <table width="90%" border="0" cellspacing="0" cellpadding="0" background="/newtax/static/assets/images/back3.gif" height="330">
+                             <tbody>
+                                 <tr>
+                                     <td style="font-size:14px;color:#FF0000"><b>
+                详细的使用说明，请参看左边的“网上申报说明”。   <br>
+        </b>
+        </td>
+                                 </tr>
+                                 <tr>
+                                     <td></td>
+                                 </tr>
+                                 <tr>
+                                     <td></td>
+                                 </tr>
+                                 <tr>
+                                     <td></td>
+                                 </tr>
+                            </tboby>
+                        </table>
+                        </div>
+                        <div style="clear:both"></div>
                     </div>
-                </div>
+                 </div>
             </form>
 
 
@@ -369,7 +349,7 @@
 
 
 
-        <div id="copyright">
+        <div id="copyright" style="margin-left:auto;margin-right:auto">
             | 2001-2010 | 版权所有 江苏省国家税务局 主办 |<br />
             | 地址：江苏省南京市中山北路55号 | 邮编：210008 | 备案序号：苏ICP备05002258 |
         </div>
