@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CYQ.Data, Version=5.5.6.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\CYQ.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,6 +112,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Admin\Admin.aspx" />
     <Content Include="Content\ReSet.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -164,6 +169,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CYQ.Data.dll" />
+    <Content Include="CYQ.Data.XML" />
     <Content Include="Default.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bodybg.jpg" />
@@ -291,7 +298,6 @@
     <Content Include="newtax\static\js\jquery\jquery-1.3.2.min.js" />
     <Content Include="newtax\static\js\jquery\thickbox.js" />
     <Content Include="newtax\static\main.aspx" />
-    <Content Include="newtax\nssb_Access.aspx" />
     <Content Include="newtax\static\styles\bsdh\thickbox.css" />
     <Content Include="newtax\static\styles\images\blank.gif" />
     <Content Include="newtax\static\styles\images\blanka.gif" />
@@ -342,8 +348,8 @@
     <Content Include="newtax\static\styles\newtax_1\images\title1_new.gif" />
     <Content Include="newtax\static\styles\newtax_1\images\xlbg.gif" />
     <Content Include="newtax\static\mainlgn.aspx" />
-    <Content Include="newtax\static\nssb_GetSssq.aspx" />
     <Content Include="packages.config" />
+    <Content Include="CYQ.Data API 帮助文档 For V5.chm" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -363,6 +369,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -410,6 +423,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\DbUser.cs" />
     <Compile Include="newtax\static\main.aspx.cs">
       <DependentUpon>main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -423,20 +437,6 @@
     </Compile>
     <Compile Include="newtax\static\mainlgn.aspx.designer.cs">
       <DependentUpon>mainlgn.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="newtax\nssb_Access.aspx.cs">
-      <DependentUpon>nssb_Access.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="newtax\nssb_Access.aspx.designer.cs">
-      <DependentUpon>nssb_Access.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="newtax\static\nssb_GetSssq.aspx.cs">
-      <DependentUpon>nssb_GetSssq.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="newtax\static\nssb_GetSssq.aspx.designer.cs">
-      <DependentUpon>nssb_GetSssq.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

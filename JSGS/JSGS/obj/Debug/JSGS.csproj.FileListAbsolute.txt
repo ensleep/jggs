@@ -32,3 +32,39 @@ c:\users\administrator\documents\visual studio 2012\Projects\JSGS\JSGS\bin\zh-Ha
 c:\users\administrator\documents\visual studio 2012\Projects\JSGS\JSGS\obj\Debug\JSGS.csprojResolveAssemblyReference.cache
 c:\users\administrator\documents\visual studio 2012\Projects\JSGS\JSGS\obj\Debug\JSGS.dll
 c:\users\administrator\documents\visual studio 2012\Projects\JSGS\JSGS\obj\Debug\JSGS.pdb
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\obj\Debug\JSGS.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\obj\Debug\JSGS.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\obj\Debug\JSGS.pdb
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\JSGS.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\JSGS.pdb
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\CYQ.Data.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.Core.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\EntityFramework.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\System.Web.Providers.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\System.Net.Http.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\CYQ.Data.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\EntityFramework.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.Core.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\System.Net.Http.xml
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\zh-Hans\System.Web.Providers.resources.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\zh-Hans\Microsoft.AspNet.Membership.OpenAuth.resources.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\zh-Hans\Microsoft.AspNet.FriendlyUrls.resources.dll
+C:\Users\Administrator\Documents\GitHub\jggs\JSGS\JSGS\bin\zh-Hans\System.Net.Http.resources.dll
